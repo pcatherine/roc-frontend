@@ -1,0 +1,74 @@
+/* MODAL STYLES
+-------------------------------*/
+
+.custom-modal {
+  /* modal container fixed across whole screen */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* z-index must be higher than .modal-background */
+  z-index: 10000;
+  /* enables scrolling for tall modals */
+  overflow-x: auto;
+  overflow-y: scroll;
+/* width: 900px; */
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.modal-background {
+  /* modal background fixed across whole screen */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* semi-transparent black  */
+  /* background-color: #000; */
+  /* opacity: 0.75; */
+  /* z-index must be below .modal and above everything else  */
+  z-index: 9999;
+}
+
+.modal-content {
+  border-radius: 3px;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.125);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.125);
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  .modal-content {
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.125);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.125);
+  }
+}
+
+.modal-header {
+  border-bottom-color: #f4f4f4;
+}
+
+.modal-footer {
+  border-top-color: #f4f4f4;
+}
+
+.modal-primary .modal-header, .modal-primary .modal-footer {
+  border-color: #307095;
+}
+
+.modal-warning .modal-header, .modal-warning .modal-footer {
+  border-color: #c87f0a;
+}
+
+.modal-info .modal-header, .modal-info .modal-footer {
+  border-color: #0097bc;
+}
+
+.modal-success .modal-header, .modal-success .modal-footer {
+  border-color: #00733e;
+}
+
+.modal-danger .modal-header, .modal-danger .modal-footer {
+  border-color: #c23321;
+}

@@ -1,0 +1,233 @@
+/***************************************************
+ *** VARIABLES
+****************************************************/
+$brandguide-dark-gray: #1a2226;
+$brandguide-dark-gray-b50: #293036;
+$brandguide-dark-gray-b75: #15181b;
+
+$brandguide-light-gray: #bfc0c2;
+
+$brandguide-light-blue: #f39c12;
+
+$brandguide-white: #ffffff;
+$brandguide-white-alpha05: rgba(255, 255, 255, 0.05);
+
+$open-size: 230px;
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/***************************************************
+ *** ID SIDEBAR - #sidebar
+****************************************************/
+#sidebar {
+  #application-name {
+    height: 64px;
+    // margin-left: 8px;
+    color: $brandguide-dark-gray;
+    font-size: 18px;
+    padding-right: 13px;
+    white-space: nowrap;
+    border-bottom: 1px solid $brandguide-white-alpha05;
+    background-color: #e08e0b;
+    width: 100%;
+
+
+    .col-10 {
+      padding-top: 4px;
+    }
+    .col-2 {
+      svg {
+        color: $brandguide-dark-gray;
+      }
+    }
+  }
+
+  #menu-bottom ul {
+    border-top: 1px solid $brandguide-white;
+  }
+
+  #toggler {
+    border-bottom: 1px solid $brandguide-white-alpha05;
+    height: 64px;
+    background-color: #e08e0b;
+
+
+    .btn svg {
+      color: $brandguide-dark-gray;
+    }
+  }
+
+  button {
+    @include reset-list;
+  }
+
+  &:hover {
+    #application-name {
+      display: block;
+    }
+
+    #toggler {
+      display: none;
+    }
+  }
+}
+
+/***************************************************
+ *** CLASS SIDEBAR-MENU - .sidebar-menu
+****************************************************/
+.sidebar-menu {
+  background-color: $brandguide-dark-gray;
+  // margin-top: -8px;
+  z-index: 2;
+  height: 100%;
+  width: 50px;
+  position: fixed;
+  transition: width 0.3s ease;
+  overflow: hidden;
+
+  &:hover {
+    width: $open-size;
+  }
+
+  #application-name {
+    display: none;
+  }
+
+  .active {
+    background-color: $brandguide-dark-gray-b50;
+    border-left: 4px solid $brandguide-light-blue;
+    padding-left: 6px;
+    border-top-color: $brandguide-dark-gray-b75;
+    border-bottom-color: $brandguide-dark-gray-b75;
+    span{
+      padding-left:17px;
+
+    }
+  }
+
+  span {
+    position: absolute;
+    padding-left: 18px;
+    white-space: nowrap;
+  }
+
+  ul {
+    @include reset-list;
+
+    li {
+      padding: 5px 13px 5px 10px;
+      border-top: 1px solid $brandguide-white-alpha05;
+      border-bottom: 1px solid $brandguide-white-alpha05;
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        &:visited,
+        &:hover,
+        &:active,
+        &:link {
+          text-decoration: none;
+        }
+      }
+
+      svg{
+        padding-left: 6px;
+        color: $brandguide-white;
+      }
+      
+      span {
+        color: $brandguide-white;
+      }
+
+      &:hover {
+        border-top-color: $brandguide-light-gray;
+        border-bottom-color: $brandguide-light-gray;
+      }
+    }
+  }
+}
+
+.sidebar-open {
+  width: $open-size;
+
+  #toggler {
+    display: none;
+  }
+
+  #application-name {
+    display: inline-block;
+  }
+}
+
+/***************************************************
+ *** MOBILE - @media (max-width: 767px)
+****************************************************/
+@media (max-width: 767px) {
+  #sidebar {
+    #application-name {
+      // color: $brandguide-dark-gray;
+      border-bottom: none;
+      margin-bottom: -1px;
+      // .col-2 {
+      //   svg {
+      //     color: $brandguide-dark-gray;
+      //   }
+      // }
+    }
+
+    // #toggler {
+    //   // border-bottom-color: $brandguide-light-gray;
+
+    //   // .btn svg {
+    //   //   color: $brandguide-dark-gray;
+
+    //   //   &:hover {
+    //   //     color: $brandguide-dark-gray;
+    //   //   }
+    //   // }
+    // }
+  }
+
+  .sidebar-menu {
+    height: auto;
+    background-color: $brandguide-dark-gray;//#efeff0;
+    // position: relative;
+
+    #menu-top,
+    #menu-bottom {
+      display: none;
+    }
+
+    // ul {
+    //   li {
+    //     // border-top-color: $brandguide-light-gray;
+    //     // border-bottom-color: $brandguide-light-gray;
+    //     svg,
+    //     span {
+    //       // color: $brandguide-dark-gray;
+    //     }
+    //   }
+    // }
+    &:hover {
+      height: 100%;
+      #menu-top,
+      #menu-bottom {
+        display: block;
+      }
+    }
+  }
+
+  .sidebar-open {
+    height: 100%;
+
+    #menu-top,
+    #menu-bottom {
+      display: inline;
+    }
+  }
+}

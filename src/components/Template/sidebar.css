@@ -1,0 +1,79 @@
+.sidebar-menu {
+  background-color: #56514E;
+  z-index: 2;
+  height: 100%;
+  width: 65px;
+  position: fixed;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  top: 135px;
+}
+
+@media (max-width: 768px) {
+  .sidebar-menu {
+    top: 60px;
+  }
+}
+
+.sidebar-menu:hover {
+  width: 200px;
+
+}
+
+.sidebar-menu a{
+  display: inline-block;
+  width: 100%;
+  margin: 22px;
+}
+
+.sidebar-menu button {
+  font-size: 1.2em;
+}
+
+.sidebar-menu span {
+  /* position: relative; */
+  position: absolute;
+  padding-left: 24px;
+  white-space: nowrap;
+  /* display: none; */
+}
+
+
+.sidebar-menu ul,
+.sidebar-menu li {
+  margin: 0;
+  padding: 0 0 0 0;
+  list-style: none;
+}
+
+.sidebar-menu li{
+  /* padding: 22px; */
+  margin-bottom: 5px
+}
+
+.sidebar-menu a:link,
+.sidebar-menu a:visited,
+.sidebar-menu a:hover,
+.sidebar-menu a:active {
+  text-decoration: none;
+}
+
+.sidebar-menu span,
+.sidebar-menu svg,
+.sidebar-menu ul li svg,
+.sidebar-menu ul li span {
+  color: #fff;
+
+}
+
+.sidebar-menu ul li:hover {
+  color: #66c0ab;
+  background-color: #938376;
+}
+
+.sidebar-menu .active span,
+.sidebar-menu .active svg,
+.sidebar-menu ul li:hover svg,
+.sidebar-menu ul li:hover span {
+  color: #66c0ab;
+}
