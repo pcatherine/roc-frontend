@@ -24,11 +24,11 @@ export default function Layout(props) {
           </Link>
           <Link to="/introduction">
             <FontAwesome icon="play" size="lg"  />
-            <span style={{ paddingLeft: "20px"}}>Introduction</span>
+            <span style={{ paddingLeft: "20px"}}>Introdução</span>
           </Link>
-          <Link to="/method">
+          <Link to="/motivation">
             <FontAwesome icon="shapes" size="lg" />
-            <span>Method</span>
+            <span>Motivação</span>
           </Link>
           <Link to="/results">
             <FontAwesome icon="check-circle" size="lg" />
