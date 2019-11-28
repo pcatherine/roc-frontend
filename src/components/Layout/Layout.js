@@ -23,8 +23,8 @@ export default function Layout(props) {
             <span>Home</span>
           </Link>
           <Link to="/introduction">
-            <FontAwesome icon="play" size="lg"  />
-            <span style={{ paddingLeft: "20px"}}>Introdução</span>
+            <FontAwesome icon="play" size="lg" />
+            <span style={{ paddingLeft: "20px" }}>Introdução</span>
           </Link>
           <Link to="/motivation">
             <FontAwesome icon="shapes" size="lg" />
@@ -36,7 +36,7 @@ export default function Layout(props) {
           </Link>
           <Link to="/Conclusion">
             <FontAwesome icon="award" size="lg" />
-            <span style={{ paddingLeft: "23px"}}>Conclusion</span>
+            <span style={{ paddingLeft: "23px" }}>Conclusion</span>
           </Link>
         </Sidebar.MenuTop>
       </Sidebar>
