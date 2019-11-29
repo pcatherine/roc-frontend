@@ -34,9 +34,13 @@ export default function Layout(props) {
             <FontAwesome icon="check-circle" size="lg" />
             <span>Results</span>
           </Link>
-          <Link to="/Conclusion">
-            <FontAwesome icon="award" size="lg" />
-            <span style={{ paddingLeft: "23px" }}>Conclusion</span>
+          <Link to="/future">
+            <FontAwesome icon="brain" size="lg" />
+            <span >Trabalhos Futuros</span>
+          </Link>
+          <Link to="/links">
+            <FontAwesome icon="link" size="lg" />
+            <span >Links Relacionados</span>
           </Link>
         </Sidebar.MenuTop>
       </Sidebar>
