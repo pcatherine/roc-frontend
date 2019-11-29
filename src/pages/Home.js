@@ -37,7 +37,6 @@ export default class Home extends React.Component {
             this.setState({
               tvshow: resultsTitle.results[0],
               reviews: results.reviews
-
             })
           }
         });
@@ -48,7 +47,14 @@ export default class Home extends React.Component {
 
 
   render() {
-    console.log(this.state.reviews);
+
+    let listReviews = [];
+    this.state.reviews.map(review => 
+      listReviews.push(review.reviewText)
+    )
+
+    console.log(listReviews);
+
 
     return (
       <Layout>
@@ -57,9 +63,9 @@ export default class Home extends React.Component {
         <Form submitHandler={this.handleSubmit} title="Quer saber se sua série favorita vai ser renovada ou cancelada?" id={0} >
           <input id="titulo" type="text" required value={this.state.titulo} />
         </Form >
-        <ol className="mt-4">
-          {this.state.reviews.map((review, index) =>
-            <li className="pb-3" key={index}>{review.reviewText}</li>
+        <ol className=" m-0 p-0 mt-4 ml-3">
+          {listReviews.map((review, index) =>
+            <li className="pb-3" key={index}>{review}</li>
           )}
         </ol>
       </Layout>
