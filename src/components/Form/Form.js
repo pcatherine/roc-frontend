@@ -30,7 +30,7 @@ import React from "react";
 class Form extends React.Component {
   static defaultProps = {
     // title: "Simple Form",
-    buttonSubmit: "Salvar",
+    buttonSubmit: "Descobrir",
     buttonClose: "Fechar"
   }
 
@@ -100,6 +100,7 @@ class Form extends React.Component {
   }
 
   handleInputChange = (event) => {
+    console.log();
     event.preventDefault();
 
     const value = event.target.type === "checkbox" ? event.target.checked : event.target.value;
@@ -155,19 +156,19 @@ class Form extends React.Component {
   }
 
   render = () => {
-    const modalOrCard = `${this.props.onClickModal ? "modal" : "modal"}`;
+    const modalOrCard = `${this.props.onClickModal ? "card" : "modal"}`;
 
     return (
-      <div className={`${!this.props.onClickModal ? "card" : ""}`} >
+      <div className={`${!this.props.onClickModal ? "" : ""}`} >
 
         {this.props.title &&
-          <div className={`${modalOrCard}-header `}>
+          // <div className={`${modalOrCard}-header `}>
             <h3 className={`${modalOrCard}-title`}>{this.props.title}</h3>
-          </div>
+          // </div>
         }
 
         <form className="form" onSubmit={this.handleSubmit} >
-          <div className={`${modalOrCard}-body`}>
+          {/* <div className={`${modalOrCard}-body`}> */}
             {React.Children.map(this.props.children, (child, index) => {
               if (child.type.displayName === "FormRow") {
                 return FormRow(this, child);
@@ -175,14 +176,14 @@ class Form extends React.Component {
                 return this.renderInput(child)
               }
             })}
-          </div>
+          {/* </div> */}
 
-          <div className={`${modalOrCard}-footer`}>
+          {/* <div className={`${modalOrCard}-footer`}> */}
             {this.props.onClickModal &&
               <button type="button" onClick={this.props.onClickModal} className="btn btn-outline-secondary">{this.props.buttonClose}</button>
             }
-            <button type="submit" className="btn btn-dark-blue">{this.props.buttonSubmit}</button>
-          </div>
+            <button type="submit" className="btn btn-primary">{this.props.buttonSubmit}</button>
+          {/* </div> */}
         </form>
       </div >
     );

@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
-import API from "../commons/Api"
+import API from "../commons/Api";
+import Form from "../components/Form/Form";
 
 
 
@@ -10,33 +11,57 @@ export default class Home extends React.Component {
 
     this.state = {
       reviews: [],
+      tvshow: {},
     }
-  }
-  //GoT - tt0944947
-  // tt8001788
-  // tt4922804
-  getAll = (idTitle) => {
+    this.handleSubmit = this.handleSubmit.bind(this);
 
-    API.getReviews(idTitle).then((results, err) => {
+  }
+
+  handleSubmit(e, { titulo }) {
+
+    API.getIdTitle(titulo).then((resultsTitle, err) => {
       if (err) {
         console.log(`cannot connect to database: ${err}`);
         throw err;
       };
 
-      console.log(results)
-    });
-  };
+      if (resultsTitle) {
+        console.log(resultsTitle.results[0].id.split("/")[2]);
+        API.getReviews(resultsTitle.results[0].id.split("/")[2]).then((results, err) => {
+          if (err) {
+            console.log(`cannot connect to database: ${err}`);
+            throw err;
+          };
 
-  componentDidMount() {
-    // this.getAll();
+          if (results) {
+            this.setState({
+              tvshow: resultsTitle.results[0],
+              reviews: results.reviews
+
+            })
+          }
+        });
+      }
+
+    });
   }
 
+
   render() {
+    console.log(this.state.reviews);
+
     return (
       <Layout>
-        <h2>Bem-vindo ao projeto: <strong>Renew or Cancel</strong></h2>
-        <h5> Quer saber se sua série favorita vai ser renovada ou cancelada?</h5>
-        <h5>Digite e descubra:</h5>
+        <h2 className="pb-4">Bem-vindo ao projeto: <strong>Renew or Cancel</strong></h2>
+
+        <Form submitHandler={this.handleSubmit} title="Quer saber se sua série favorita vai ser renovada ou cancelada?" id={0} >
+          <input id="titulo" type="text" required value={this.state.titulo} />
+        </Form >
+        <ol className="mt-4">
+          {this.state.reviews.map((review, index) =>
+            <li className="pb-3" key={index}>{review.reviewText}</li>
+          )}
+        </ol>
       </Layout>
     )
   }
