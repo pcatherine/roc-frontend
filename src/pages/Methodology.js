@@ -2,7 +2,6 @@ import React from "react";
 import Layout from "../components/Layout/Layout";
 import DynamicTable from "../components/Table/DynamicTable";
 
-
 export default class Methodology extends React.Component {
   render() {
     const classifier = [{

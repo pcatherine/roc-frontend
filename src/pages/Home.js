@@ -2,8 +2,7 @@ import React from "react";
 import Layout from "../components/Layout/Layout";
 import API from "../commons/Api";
 import Form from "../components/Form/Form";
-
-
+import DynamicTable from "../components/Table/DynamicTable";
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -55,6 +54,7 @@ export default class Home extends React.Component {
     )
 
     console.log(listReviews);
+    let dataTable = [];
 
 
     return (
@@ -81,11 +81,36 @@ export default class Home extends React.Component {
           <input id="titulo" type="text" required value={this.state.titulo} />
         </Form >
 
-        <ol className=" m-0 p-0 mt-4 ml-3">
-          {listReviews.map((review, index) =>
-            <li className="pb-3" key={index}>{review}</li>
-          )}
-        </ol>
+
+        <div className="row pt-5">
+          <div className="col-md-2">
+            {this.state.tvshow.image &&
+              <>
+                <img src={this.state.tvshow.image.url} alt="tvshow img" style={{ width: "100%" }} />
+                <div>Ano: <b>{this.state.tvshow.year}</b></div>
+              </>
+            }
+          </div>
+          <div className="col-md-10">
+            {listReviews.forEach((review, index) => {
+              dataTable.push({
+                "#": <b>{index + 1}</b>,
+                "COMENTÁRIO": review,
+                "VALÊNCIA": "--",
+              })
+            }
+            )}
+
+            <DynamicTable
+              data={dataTable}
+              width={"5px * *"}
+            />
+          </div>
+
+        </div>
+
+
+
       </Layout>
     )
   }

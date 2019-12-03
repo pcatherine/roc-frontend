@@ -88,7 +88,7 @@ export default class DynamicTable extends React.Component {
       <div className="table-responsive" >
         <table className={`table ${this.props.variant}`} style={{ maxHeight: this.state.maxHeight }}>
 
-          <thead style={{ borderBottom: "2px solid #dee2e6" }} >
+          <thead >
             <tr
               key="tableHead"
               className="text-capitalize font-weight-bold"
