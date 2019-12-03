@@ -27,12 +27,16 @@ export default function Layout(props) {
             <span style={{ paddingLeft: "20px" }}>Introdução ao Problema</span>
           </Link>
           <Link to="/motivation">
-            <FontAwesome icon="shapes" size="lg" />
+            <FontAwesome icon="smile-beam" size="lg" />
             <span>Motivação</span>
+          </Link>
+          <Link to="/classifiers">
+            <FontAwesome icon="bezier-curve" size="lg" />
+            <span style={{ paddingLeft: "12px" }}>Classificadores</span>
           </Link>
           <Link to="/methodology">
             <FontAwesome icon="project-diagram" size="lg" />
-            <span>Metodologia</span>
+            <span style={{ paddingLeft: "12px" }}>Metodologia</span>
           </Link>
           <Link to="/results">
             <FontAwesome icon="check-circle" size="lg" />
