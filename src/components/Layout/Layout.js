@@ -30,6 +30,10 @@ export default function Layout(props) {
             <FontAwesome icon="shapes" size="lg" />
             <span>Motivação</span>
           </Link>
+          <Link to="/methodology">
+            <FontAwesome icon="project-diagram" size="lg" />
+            <span>Metodologia</span>
+          </Link>
           <Link to="/results">
             <FontAwesome icon="check-circle" size="lg" />
             <span>Análise dos resultados</span>

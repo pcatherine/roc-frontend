@@ -6,7 +6,7 @@ export default class Learned extends React.Component {
     return (
       <Layout>
         <h2>Lições Aprendidas</h2>
-        <p>Esse trabalho nos permitiu conhecer a fundo algumas ferramentas de classificação de emoções em textos, durante a realização desse trabalho tivemos algumas mudanças a fim de melhorar o resultado, no início iriamos usar o Firebase como front end, mas vimos que o React se enquadrou melhor no trabalho, também mudamos a arquitetura do classificador a fim de melhorar a velocidade de processamento, com a exclusão de uma etapa que seria a comparação por semelhança, abaixo temos as arquiteturas.</p>
+        <p>Neste trabalho pudemos praticar o uso de classificação de emoções em texto, especificamente a análise de valência, além de realizar o treinamento de classificadores. Além disso, pudemos trabalhar com novas APIs e ir mais a fundo na busca por dados de treinamento. Tivemos algumas dificuldades, como a mudança de backend, limitações com API, dificuldade de encontrar datasets rotulados e até mesmo a análise das palavras, visto que o classificador não estava preparado para receber gírias, emojis ou abreviaturas. Entretanto, isso fica como aprendizado para trabalhos futuros.</p>
         <div className="row pt-3">
           <div className="col-md-6">
             <center>

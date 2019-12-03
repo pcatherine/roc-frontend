@@ -72,7 +72,7 @@ export default class Results extends React.Component {
             <h5>Resultados</h5>
             <div>Série: <b>Game of Thrones</b></div>
             <div>Status atual: <b>Finalizada</b></div>
-            <div>divredição: <b>72% renovada, 28% cancelada</b></div>
+            <div>Predição: <b>72% renovada, 28% cancelada</b></div>
           </div>
         </div>
 
@@ -93,7 +93,7 @@ export default class Results extends React.Component {
             <h5>Resultados</h5>
             <div>Série: <b>V (2009)</b></div>
             <div>Status atual: <b>Cancelada</b></div>
-            <div>divredição: <b>48% renovada, 52% cancelada</b></div>
+            <div>Predição: <b>48% renovada, 52% cancelada</b></div>
           </div>
         </div>
 
@@ -114,7 +114,7 @@ export default class Results extends React.Component {
             <h5>Resultados</h5>
             <div>Série: <b>The Secret Circle</b></div>
             <div>Status atual: <b>Finalizada</b></div>
-            <div>divredição: <b>60% renovada, 40% renovada</b></div>
+            <div>Predição: <b>60% renovada, 40% renovada</b></div>
           </div>
         </div>
 
@@ -135,7 +135,7 @@ export default class Results extends React.Component {
             <h5>Resultados</h5>
             <div>Série: <b>Dear White People</b></div>
             <div>Status atual: <b>Renovada para última temporada</b></div>
-            <div>divredição: <b>36% renovada, 64% cancelada</b></div>
+            <div>Predição: <b>36% renovada, 64% cancelada</b></div>
           </div>
         </div>
 
@@ -156,7 +156,7 @@ export default class Results extends React.Component {
             <h5>Resultados</h5>
             <div>Série: <b>The Handmaid’s Tale</b></div>
             <div>Status atual: <b>Renovada</b></div>
-            <div>divredição: <b>48% renovada, 52% cancelada</b></div>
+            <div>Predição: <b>48% renovada, 52% cancelada</b></div>
           </div>
         </div>
 
@@ -177,7 +177,7 @@ export default class Results extends React.Component {
             <h5>Resultados</h5>
             <div>Série: <b>13 Reasons Why</b></div>
             <div>Status atual: <b>Renovada para última temporada</b></div>
-            <div>divredição: <b>16% renovada, 84% cancelada</b></div>
+            <div>Predição: <b>16% renovada, 84% cancelada</b></div>
           </div>
         </div>
 
@@ -198,11 +198,11 @@ export default class Results extends React.Component {
             <h5>Resultados</h5>
             <div>Série: <b>Euphoria</b></div>
             <div>Status atual: <b>Renovada</b></div>
-            <div>divredição: <b>72% renovada, 28% cancelada</b></div>
+            <div>Predição: <b>72% renovada, 28% cancelada</b></div>
           </div>
         </div>
 
-    <p>Analisando os resultados, podemos inferir alguns pontos interessantes. Primeiro, Game of Thrones, apesar de ter tido muitos comentários negativos em sua última temporada, muito devido ao episódio da série, que não agradou muitos fãs da série, ainda assim seria renovada, caso o critério fossem os comentários dos espectadores.</p>
+    <p className="pt-4">Analisando os resultados, podemos inferir alguns pontos interessantes. Primeiro, Game of Thrones, apesar de ter tido muitos comentários negativos em sua última temporada, muito devido ao episódio da série, que não agradou muitos fãs da série, ainda assim seria renovada, caso o critério fossem os comentários dos espectadores.</p>
     <p>Comparando duas séries já canceladas com os resultados do nosso classificador, verificamos que para V (2009), ele acertaria o cancelamento da série, mas para The Secret Circle, não. Isso se deve, em parte, ao fato de que a segunda é uma série adolescente, uma modalidade que possui sempre bases de fãs empenhadas em demonstrar que as séries são boas. Os comentários devem ser em sua maior parte positivos devido a esse fato.</p>
     <p>A série Dear White People, que foi renovada para a sua última temporada, em nosso classificador, teríamos que a mesma seria cancelada. Aqui é interessante notar que o assunto da série, racismo, pode ser entendido pelo classificador de diversas formas, isto é, comentários que podem ser positivos, mas possuem palavras negativas (como o próprio racismo) podem levar a classificação para um falso negativo e, assim, resultar em números expressivos como 64% de chance de cancelamento.</p>
     <p>The Handmaid’s Tale segue o mesmo caminho, pois o nosso classificador predisse que a mesma seria cancelada, mas por uma margem muito pequena. O que nos leva a pensar que comentários, mesmo que positivos, também são entendidos de forma errônea pelo classificador.</p>

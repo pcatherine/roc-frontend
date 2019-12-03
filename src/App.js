@@ -10,6 +10,7 @@ import Results from "./pages/Results";
 import Conclusion from "./pages/Conclusion";
 import References from "./pages/References";
 import Learned from "./pages/Learned";
+import Methodology from "./pages/Methodology";
 
 
 export default class App extends React.Component {
@@ -23,6 +24,7 @@ export default class App extends React.Component {
           <Route exact path="/introduction" component={Introduction} /> 
           <Route exact path="/motivation" component={Motivation} />
 
+          <Route exact path="/methodology" component={Methodology} />
           <Route exact path="/results" component={Results} />
           <Route exact path="/conclusion" component={Conclusion} />
           <Route exact path="/learned" component={Learned} />
