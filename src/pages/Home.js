@@ -34,6 +34,7 @@ export default class Home extends React.Component {
           };
 
           if (results) {
+            console.log(resultsTitle.results[0]);
             this.setState({
               tvshow: resultsTitle.results[0],
               reviews: results.reviews
@@ -49,7 +50,7 @@ export default class Home extends React.Component {
   render() {
 
     let listReviews = [];
-    this.state.reviews.map(review => 
+    this.state.reviews.map(review =>
       listReviews.push(review.reviewText)
     )
 
@@ -58,7 +59,23 @@ export default class Home extends React.Component {
 
     return (
       <Layout>
-        <h2 className="pb-4">Bem-vindo ao projeto: <strong>Renew or Cancel</strong></h2>
+
+
+        <div className="row">
+          <div className="col-6">
+            <h4>Bem-vindo ao projeto final de <b>Computação Afetiva</b>: </h4>
+            <h1><b>Renew or Cancel</b></h1>
+          </div>
+          
+          <div className="col-6 text-right">
+            <b>Profa. Paula Dornhofer Paro Costa</b>
+            <div>Caroline Santos Pereira</div>
+            <div>Jessyca Nobre</div>
+            <div>Leandro Carvalho</div>
+            <div>Paolla Agard</div>
+          </div>
+        </div>
+
 
         <Form submitHandler={this.handleSubmit} title="Quer saber se sua série favorita vai ser renovada ou cancelada?" id={0} >
           <input id="titulo" type="text" required value={this.state.titulo} />

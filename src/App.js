@@ -6,6 +6,10 @@ import Introduction from "./pages/Introducion";
 import Motivation from "./pages/Motivation";
 import Future from "./pages/Future";
 import Links from "./pages/Links";
+import Results from "./pages/Results";
+import Conclusion from "./pages/Conclusion";
+import References from "./pages/References";
+import Learned from "./pages/Learned";
 
 
 export default class App extends React.Component {
@@ -16,9 +20,14 @@ export default class App extends React.Component {
         <Switch>
 
           <Route exact path="/" component={Home} />
-          <Route exact path="/introduction" component={Introduction} />
+          <Route exact path="/introduction" component={Introduction} /> 
           <Route exact path="/motivation" component={Motivation} />
+
+          <Route exact path="/results" component={Results} />
+          <Route exact path="/conclusion" component={Conclusion} />
+          <Route exact path="/learned" component={Learned} />
           <Route exact path="/future" component={Future} />
+          <Route exact path="/references" component={References} />
           <Route exact path="/links" component={Links} />
 
           <Redirect to="/" />

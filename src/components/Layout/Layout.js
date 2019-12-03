@@ -24,7 +24,7 @@ export default function Layout(props) {
           </Link>
           <Link to="/introduction">
             <FontAwesome icon="play" size="lg" />
-            <span style={{ paddingLeft: "20px" }}>Introdução</span>
+            <span style={{ paddingLeft: "20px" }}>Introdução ao Problema</span>
           </Link>
           <Link to="/motivation">
             <FontAwesome icon="shapes" size="lg" />
@@ -32,11 +32,23 @@ export default function Layout(props) {
           </Link>
           <Link to="/results">
             <FontAwesome icon="check-circle" size="lg" />
-            <span>Results</span>
+            <span>Análise dos resultados</span>
+          </Link>
+          <Link to="/conclusion">
+            <FontAwesome icon="gavel" size="lg" />
+            <span>Conclusão</span>
+          </Link>
+          <Link to="/learned">
+            <FontAwesome icon="glasses" size="lg" />
+            <span>Lições Aprendidas</span>
           </Link>
           <Link to="/future">
             <FontAwesome icon="brain" size="lg" />
             <span >Trabalhos Futuros</span>
+          </Link>
+          <Link to="/references">
+            <FontAwesome icon="ellipsis-h" size="lg" />
+            <span >Referências Utilizadas </span>
           </Link>
           <Link to="/links">
             <FontAwesome icon="link" size="lg" />
