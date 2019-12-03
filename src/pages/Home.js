@@ -55,7 +55,7 @@ export default class Home extends React.Component {
 
     console.log(listReviews);
     let dataTable = [];
-
+console.log(dataTable.length)
 
     return (
       <Layout>
@@ -101,10 +101,12 @@ export default class Home extends React.Component {
             }
             )}
 
-            <DynamicTable
-              data={dataTable}
-              width={"5px * *"}
-            />
+            {dataTable.length > 0 &&
+              <DynamicTable
+                data={dataTable}
+                width={"5px * *"}
+              />
+            }
           </div>
 
         </div>
