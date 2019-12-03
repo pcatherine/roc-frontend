@@ -61,18 +61,18 @@ export default class Home extends React.Component {
       <Layout>
 
 
-        <div className="row">
-          <div className="col-6">
+        <div className="row pb-5">
+          <div className="col-md-6">
             <h4>Bem-vindo ao projeto final de <b>Computação Afetiva</b>: </h4>
             <h1><b>Renew or Cancel</b></h1>
           </div>
-          
-          <div className="col-6 text-right">
+
+          <div className="col-md-6 text-right">
             <b>Profa. Paula Dornhofer Paro Costa</b>
             <div>Caroline Santos Pereira</div>
             <div>Jessyca Nobre</div>
             <div>Leandro Carvalho</div>
-            <div>Paolla Agard</div>
+            <div>Paolla Catherine Agard</div>
           </div>
         </div>
 
@@ -80,6 +80,7 @@ export default class Home extends React.Component {
         <Form submitHandler={this.handleSubmit} title="Quer saber se sua série favorita vai ser renovada ou cancelada?" id={0} >
           <input id="titulo" type="text" required value={this.state.titulo} />
         </Form >
+
         <ol className=" m-0 p-0 mt-4 ml-3">
           {listReviews.map((review, index) =>
             <li className="pb-3" key={index}>{review}</li>
